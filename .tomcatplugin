@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation></warLocation>
+    <extraInfo></extraInfo>
+    <webPath>/checknews</webPath>
+    <webClassPathEntries>
+        <webClassPathEntry>/checknews/WEB-INF/classes</webClassPathEntry>
+        <webClassPathEntry>/checknews/WEB-INF/lib/jsmartcom_zh_CN.jar</webClassPathEntry>
+        <webClassPathEntry>/checknews/WEB-INF/lib/mysql-connector-java-3.0.17-ga-bin.jar</webClassPathEntry>
+        <webClassPathEntry>/checknews/work</webClassPathEntry>
+    </webClassPathEntries>
+</tomcatProjectProperties>
