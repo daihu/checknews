@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class conn {
 	String sDBDriver = "org.gjt.mm.mysql.Driver";	 
-	String sConnStr = "jdbc:mysql://localhost/test";
+	String sConnStr = "jdbc:mysql://localhost/zhazh";
 	Connection connect = null;
 	ResultSet rs = null;
 
