@@ -1,79 +1,40 @@
 <%@ page contentType="text/html; charset=gb2312" %>
-
 <%@ page language="java" %>
-
 <%@ page import="com.mysql.jdbc.Driver" %>
-
 <%@ page import="java.sql.*" %>
+<table   border= "1 "   width= "100% "   cellspacing= "0 "   cellpadding= "0 "   align= "center "   bordercolorlight= "#ccccff "   bordercolordark= "#fffcccc ">
+<tr   bgcolor= "#ffffff ">
+<td   width= "15 "   height= "25 "   align= "center "> <i> 用户ID </i> </td>
+<td   width= "18 "   height= "25 "   align= "center "> <i> 帐房类型 </i> </td>
+<td   width= "20 "   height= "25 "   align= "center "> <i> 登录名 </i> </td>
+<td   width= "20 "   height= "25 "   align= "center "> <i> 密码 </i> </td>
 
 <%
-	//驱动程序名
+String id = request.getParameter("userid");
+String driverName = "com.mysql.jdbc.Driver";
+String userName = "root";
+String userPasswd = "111111";
+String dbName = "zhazh";
+String tableName = "m_user_account";
+String url = "jdbc:mysql://localhost/" + dbName + "?user="
+		+ userName + "&password=" + userPasswd;
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection connection = DriverManager.getConnection(url);
+Statement statement = connection.createStatement();
+String sql = "select id,accountType,loginname,password from m_user_account where userId= "
+			+id ;
+ResultSet rs = statement.executeQuery(sql);
 
-	String driverName = "com.mysql.jdbc.Driver";
+while (rs.next()) {
 
-	//数据库用户名
-
-	String userName = "root";
-
-	//密码
-
-	String userPasswd = "111111";
-
-	//数据库名
-
-	String dbName = "zhazh";
-
-	//表名
-
-	String tableName = "m_user_account";
-
-	//联结字符串
-
-	String url = "jdbc:mysql://localhost/" + dbName + "?user="
-			+ userName + "&password=" + userPasswd;
-
-	Class.forName("com.mysql.jdbc.Driver").newInstance();
-
-	Connection connection = DriverManager.getConnection(url);
-
-	Statement statement = connection.createStatement();
-
-	String sql = "SELECT id,accountType,loginname,password,userId FROM "
-			+ tableName;
-
-	ResultSet rs = statement.executeQuery(sql);
-
-	//获得数据结果集合
-
-	ResultSetMetaData rmeta = rs.getMetaData();
-
-	//确定数据集的列数，亦字段数
-
-	int numColumns = rmeta.getColumnCount();
-
-	// 输出每一个数据值
-
-	out.print("id");
-
-	out.print("|");
-
-	out.print("num");
-
-	out.print("<br>");
-
-	while (rs.next()) {
-
-		out.print(rs.getString(1) + " ");
-
-		out.print("|");
-
-		out.print(rs.getString(2));
-
-		out.print("<br>");
-
+		%>
+			 <tr> <td   width="15"> <%out.println(rs.getInt( "id")); %></td>
+			 <td   width="15"> <%out.println(rs.getString( "accountType")); %></td>
+			 <td   width="15"> <%out.println(rs.getString( "loginname")); %></td>
+			 <td   width="15"> <%out.println(rs.getString( "password")); %></td></tr>
+<%
 	}
-
-	out.print("<br>");
+		%><br><%
 
 	rs.close();
 

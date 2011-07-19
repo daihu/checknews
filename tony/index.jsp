@@ -15,9 +15,9 @@
 	<center>
 		<h2>≤È—ØID</h2>
 		<form action="showresulet.jsp" method="post">
-			<Input type="text" name="uid" maxlength=8 style="width: 150">
+			<Input type="text" name="userid" maxlength=8 style="width: 150">
 
-			<br> <Input type="submit" value="µ«¬Ω">
+			<br> <Input type="submit" value="≤È—Ø">
 		</form>
 
 
