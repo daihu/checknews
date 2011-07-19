@@ -7,7 +7,6 @@
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
 	<classpathentry kind="src" path="WEB-INF/src"/>
-	<classpathentry kind="src" output="work" path="work"/>
 	<classpathentry exported="true" kind="lib" path="WEB-INF/lib/mysql-connector-java-3.0.17-ga-bin.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/jsmartcom_zh_CN.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
