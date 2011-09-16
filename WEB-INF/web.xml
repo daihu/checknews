@@ -31,17 +31,3 @@
 </web-app>
 
 
-<servlet>
-		
-<servlet-name>GetValitdateImage</servlet-name>
-
-<servlet-class>images.GetValitdateImage</servlet-class>
-	
-</servlet>
-	
-<servlet-mapping>
-<servlet-name>GetValitdateImage</servlet-name>
-		
-<url-pattern>/GetValitdateImage</url-pattern>
-	
-</servlet-mapping>
